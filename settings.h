@@ -12,12 +12,12 @@
 // this define enables/disabled logging data to Serial
 #define ENABLE_LOGGER 0
 
-// this define controls if seconds are also used and compared
-// more accurate, but also more time and memory consuming
+// this define controls if seconds are also used and compared.
+// it's more accurate, but also more time and memory consuming
 // 0 (false) preferred
 #define USE_SECONDS 0
 
-// define pin number where high state will be used to indicate if it is night time (movement detector enabled)
+// define pin number where high state will be used to indicate if it is a night time (movement detector enabled)
 #define IS_NIGHT_INDICATOR 13U
 
 // define input and output pin numbers for the first circuit

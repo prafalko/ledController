@@ -35,7 +35,7 @@ namespace consts
   const uint8_t november = 10U;
   const uint8_t december = 11U;
 
-  // all times in UTC+1, no summer time (also in MyClock)
+  // all times in UTC+1, no summer time (nor in MyClock)
   const MyTime sunrises[] = { MyTime(7U, 45U), // January
                               MyTime(7U, 0U),  // February
                               MyTime(5U, 55U), // March

@@ -7,6 +7,7 @@
  ***************************************************************************/
 
 #include "myclock.h"
+
 #include "consts.h"
 
 MyClock::MyClock(const MyDateTime& dateTime) :

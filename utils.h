@@ -9,16 +9,16 @@
 #ifndef UTILS_H
 #define UTILS_H
 
-#include "mydatetime.h"
 #include "consts.h"
+#include "mydatetime.h"
 
 namespace utils
 {
-	inline bool isNight(const MyDateTime& dateTime)
-	{
-		return dateTime.myTime <= consts::sunrises[dateTime.myDate.month] || 
+  inline bool isNight(const MyDateTime& dateTime)
+  {
+    return dateTime.myTime <= consts::sunrises[dateTime.myDate.month] ||
            dateTime.myTime >= consts::sunsets[dateTime.myDate.month];
-	}
+  }
 
   char* formatDateTime(char* dateTimeBuff, const MyDateTime& dateTime, uint8_t secs);
   

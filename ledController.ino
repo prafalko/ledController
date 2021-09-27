@@ -21,7 +21,7 @@ namespace
 
 void setUpInterrupt()
 {
-  cli();//stop interrupts
+  cli(); // stop interrupts
 
   //set timer1 interrupt at 1Hz
   TCCR1A = 0;// set entire TCCR1A register to 0
@@ -36,10 +36,11 @@ void setUpInterrupt()
   // enable timer compare interrupt
   TIMSK1 |= (1 << OCIE1A);
 
-  sei();//allow interrupts
+  sei(); // allow interrupts
 }
 
-ISR(TIMER1_COMPA_vect){
+ISR(TIMER1_COMPA_vect)
+{
   myClock.clockTick();
   myClockUpdated = true;
 }
@@ -137,7 +138,8 @@ void printStates(const MyDateTime& dateTime)
 #endif // (PIR_SIGNAL_2 && LEDS_OUTPUT_2)
 }
 
-void setup(){
+void setup()
+{
   setUpInterrupt();
 
 #if ENABLE_LOGGER
@@ -186,7 +188,8 @@ void setup(){
 #endif
 }
 
-void loop() {
+void loop()
+{
   if (myClockUpdated){
     const MyDateTime& dateTime = myClock.getDateTime();
     const uint8_t& secs = myClock.getTimeSeconds();

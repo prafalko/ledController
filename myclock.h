@@ -9,8 +9,8 @@
 #ifndef MYCLOCK_H
 #define MYCLOCK_H
 
-#include "settings.h"
 #include "mydatetime.h"
+#include "settings.h"
 
 extern "C"
 {

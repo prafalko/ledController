@@ -9,12 +9,12 @@
 #ifndef MYDATETIME_H
 #define MYDATETIME_H
 
+#include "settings.h"
+
 extern "C"
 {
   #include <stdio.h>
 }
-
-#include "settings.h"
 
 struct MyDate{
   MyDate(uint8_t rmonth = 0U, uint8_t rday = 0U) :
@@ -155,11 +155,11 @@ struct MyTime{
 
 struct MyDateTime{
   MyDateTime(uint8_t rmonth = 0U
-            , uint8_t rday = 0U
-            , uint8_t rhours = 0U
-            , uint8_t rminutes = 0U
+            ,uint8_t rday = 0U
+            ,uint8_t rhours = 0U
+            ,uint8_t rminutes = 0U
 #if USE_SECONDS
-            , uint8_t rseconds = 0U
+            ,uint8_t rseconds = 0U
 #endif
             ) :
     myDate(rmonth, rday),
